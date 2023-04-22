@@ -149,6 +149,11 @@ db.actor.aggregate([
       _id: "$_id",
       count: { $sum: { $size: "$films" } }
     }
+  },
+  {
+    $match: {
+      count: { $gt: 35 }
+    }
   }])
 ```
 
