@@ -57,7 +57,9 @@ Respuesta:
 
 -- Su respuesta aqui:
 
-SELECT ...
+SELECT l.language_id, l.name as language, COUNT(f.film_id) AS film_count FROM language l
+LEFT JOIN film f ON l.language_id = f.language_id
+GROUP BY l.language_id, l.name;
 
     Seleccionar todos los actores que participaron mas de 35 peliculas.
 
