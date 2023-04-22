@@ -36,7 +36,7 @@ Respuesta:
 SELECT c.city_id, c.city, COUNT(s.store_id) AS store_count FROM city c
 JOIN address a ON c.city_id = a.city_id
 JOIN store s ON a.address_id = s.address_id
-GROUP BY c.city_id;
+GROUP BY c.city_id, c.city;
 
     Listar la cantidad de películas que se hicieron por lenguaje.
 
