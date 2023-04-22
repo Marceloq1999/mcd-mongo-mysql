@@ -109,7 +109,14 @@ Respuesta:
 
 -- Su respuesta aqui:
 
-SELECT ...
+SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS comedy_film_count FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+JOIN film f ON fa.film_id = f.film_id
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+WHERE c.name = 'Comedy'
+GROUP By a.actor_id, a.first_name, a.last_name
+ORDER BY comedy_film_count ASC LIMIT 10;
 
     Obtener la lista de actores que NO han participado en ninguna película de categoría "Comedy":
 
