@@ -50,13 +50,13 @@ Para instalar la base de datos Sakila en MySQL, se pueden seguir los siguientes 
     
 8.  Importar la estructura de la base de datos Sakila: Para importar la estructura de la base de datos Sakila, se puede utilizar el siguiente comando en la terminal del contenedor:
     
-    `mysql -u root -p < sakila-db/sakila-schema.sql`
+    `mysql -u root -p < /sakila-db/sakila-schema.sql`
     
     Este comando importará la estructura de la base de datos Sakila.
     
 9.  Importar los datos de la base de datos Sakila: Para importar los datos de la base de datos Sakila, se puede utilizar el siguiente comando en la terminal del contenedor:
     
-    `mysql -u root -p < sakila-db/sakila-data.sql`
+    `mysql -u root -p < /sakila-db/sakila-data.sql`
     
     Este comando importará los datos de la base de datos Sakila.
     
