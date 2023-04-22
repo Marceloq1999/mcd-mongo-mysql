@@ -116,7 +116,7 @@ JOIN film_category fc ON f.film_id = fc.film_id
 JOIN category c ON fc.category_id = c.category_id
 WHERE c.name = 'Comedy'
 GROUP By a.actor_id, a.first_name, a.last_name
-ORDER BY comedy_film_count ASC LIMIT 10;
+ORDER BY comedy_film_count DESC LIMIT 10;
 
     Obtener la lista de actores que NO han participado en ninguna película de categoría "Comedy":
 
